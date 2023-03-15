@@ -49,11 +49,11 @@ arr.forEach(element => result.push( element+10 )
 // 
 const roundDecimals = (arr) => {
     // write your code here
-    let n = [];
-    arr.forEach(element =>  n.push(Math.round(element) )
+    let arrrr = [];
+    arr.forEach(element =>  arrrr.push(Math.round(element) )
         
     );
-    return n 
+    return arrrr
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -120,25 +120,50 @@ const roundDecimals = (arr) => {
 //     }
 // ]
 //
-
+let arrr=[]
 const employeesBonus = (arr) => {
-    let arrr=[]
+    
     
         
     arr.forEach(element => {
+        // let elementInt = parseInt(element.salary.slice(0,4))
         if (element.workHours >8 ) {
-          element.salary +=100
+            element.salary = (parseInt(element.salary.slice(0,4)) + 100)
+           element.salary=JSON.stringify( element.salary)
+           element.salary =element.salary.concat("$")
         }
         else {
-element.salary +=50
-
+element.salary =(parseInt(element.salary.slice(0,4))+50)
+element.salary=JSON.stringify (element.salary)
+element.salary =element.salary.concat("$")
         }
-        arrr.push(element)
+        //arrr.push(element)
 });
+
+
+
     // write your code here
 
-    
+    return arr
 }
+
+// the correct solution
+// const employeesBonus = (arr) => {
+
+//     arr.forEach(element => {
+//         if (element.workHours > 8) {
+//             element.salary = parseInt(element.salary.slice(0, 4)) + 100 + "$";
+//         }
+//         else {
+//             element.salary = parseInt(element.salary.slice(0, 4)) + 50 + "$";
+//         }
+//     })
+
+//     return arr;
+// }
+
+
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
