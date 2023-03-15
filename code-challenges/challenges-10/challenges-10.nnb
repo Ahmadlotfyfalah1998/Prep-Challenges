@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "function birthdayCakeCandles(candles) {\n    // Write your code here\n    let max = Math.max(...candles)\n    let count =0\nfor (let j=0 ; j<candles.length ;j++){\n    if (candles[j]==max){\n        \n      count++  \n        \n    }\n    \n}\nreturn count\n}"
             ],
             "outputs": []
         },
