@@ -73,10 +73,36 @@ const oddFiltration = (arr) => {
 
 const cvsFiltration = (arr) => {
 
+let arr3 = arr.filter(ar =>  ar.yearsOfExperience >4 && ar.tech=="JS")
+
+
+
+let out = []
+let fullName
+for (let i = 0 ; i < arr3.length  ; i++){
+
+
+
+
+
+       if (arr3[i].firstName==null){
+       fullName=arr3[i].LastName
+      }
+      else if(arr3[i].LastName==null){
+       fullName=arr3[i].firstName}
+
+      else{
+      fullName=arr3[i].firstName+" "+arr3[i].LastName
+     }
+
+
+      out.push({fullName : fullName , tech: "JS"})
 
 
 }
-    
+return out
+}
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -91,6 +117,14 @@ const cvsFiltration = (arr) => {
 
 const vowelsFiltration = (arr) => {
     // write your code here
+    let regex=/[aeiou]/
+let arrrr=arr.filter(word  => regex.test(word) )
+
+
+
+
+
+return arrrr
 } 
 // -------------------------------------------------------------------------------------------------------
 
