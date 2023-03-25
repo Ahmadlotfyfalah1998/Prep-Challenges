@@ -118,7 +118,7 @@ return out
 const vowelsFiltration = (arr) => {
     // write your code here
     let regex=/[aeiou]/
-let arrrr=arr.filter(word  => regex.test(word) )
+let arrrr=arr.filter(word  => regex.test(word)==false )
 
 
 
