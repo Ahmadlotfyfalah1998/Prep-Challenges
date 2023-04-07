@@ -15,30 +15,36 @@
 //
 
 const recursionPattern = (int1, int2) => {
-    // write your code here
+  // write your code here
+  let arr = [];
 
-let arr =[]
+  function pattern(int1, int2) {
+    arr.push(int1)
+
+    if (int1 - int2 > 0) {
+      pattern(int1 - int2, int2)
+      arr.push(int1)
+
+    }
+    else {
+      arr.push(int1 - int2)
+      arr.push(int1)
+    }
+    if (arr[0] == arr[arr.length - 1]) {
+      return arr
+
+    }
+
+  }
+
+  return pattern(int1, int2)
 
 
-if (int1-int2<0 ){
-  arr.push(int1-int2) 
 
 
 
 
 
-
-}
-else 
-{
-
-   arr.push( int1-recursionPattern(int1-int2,int2))
-
-
-
-
-}
-return arr
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -58,17 +64,17 @@ return arr
 
 const filterLinks = (str) => {
 
-let regex=/(www.[a-z]+).com|(www.[a-z]+).net|(www.[a-z]+).org/gi
+  let regex = /(www.[a-z]+).com|(www.[a-z]+).net|(www.[a-z]+).org/gi
 
 
 
 
-  let a=  str.match(regex)
+  let a = str.match(regex)
 
-return a.join('')
+  return a.join('')
 
 
-    // write your code here
+  // write your code here
 
 
 
@@ -93,15 +99,15 @@ return a.join('')
 //
 
 const isPalindrome = (str) => {
-let regex=/[\W]/g
-   let str2= str.toLowerCase()
-let str3=str2.replace(regex,"")
- let str4  = str3.split('')
-let str5 =str4.reverse()
-let str6=str5.join('')
-return str6===str3
+  let regex = /[\W]/g
+  let str2 = str.toLowerCase()
+  let str3 = str2.replace(regex, "")
+  let str4 = str3.split('')
+  let str5 = str4.reverse()
+  let str6 = str5.join('')
+  return str6 === str3
 
-    // write your code here
+  // write your code here
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -125,7 +131,7 @@ return str6===str3
 //
 
 const samePattern = (str, arr) => {
-    // write your code here
+  // write your code here
 }
 // -------------------------------------------------------------------------------------------------------
 
