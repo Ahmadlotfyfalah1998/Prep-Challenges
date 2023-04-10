@@ -129,3 +129,39 @@ return index+1
 // -------------------------------------------------------------------------------------------------------
 
 module.exports = { wordLength, wordLetters, targetIndex };
+
+
+
+
+
+function appendAndDelete(s, t, k) {
+    // Write your code here
+let arr1=s.split('')
+let arr2=t.split('')
+let num=0
+for (let index = 0; index < array.length; index++) {
+    if (arr1[index]=arr2[index]) {
+        num++
+    }
+    
+
+
+}
+
+let diff1=arr1.length-num
+    let diff2=arr2.length-num
+    if (diff1+diff2>k) {
+        return "No"
+    }
+else{
+    return "Yes"
+}
+
+
+
+
+
+
+
+
+}
