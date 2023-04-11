@@ -45,7 +45,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "function encryption(s) {\n    // Write your code here\n let a =s.replace(/\\s/,'')   \n  let arr=a.split('')\n  let row=Math.floor(Math.sqrt(arr.length))\n   let colomn=Math.ceil(Math.sqrt(arr.length))\n   if(row*colomn<arr.length){\n       row++\n      \n   }\n   let str =\"\"\n   for ( let index=0 ; index<colomn;index++){\n       let jump=0\n       while(index +jump<arr.length){\n       str+=arr[index+jump]\n       jump+=colomn\n       }\n    str+= \" \"  \n   }\n  \n  return str\n  \n  \n    \n    \n\n}"
             ],
             "outputs": []
         },
@@ -59,7 +59,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "\nfunction timeInWords(h, m) {\n    // Write your code here\n    \nlet arr=['','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','quarter','sixteen','seventeen','eighteen','nineteen','twenty','twenty one','twenty two','twenty three','twenty four','twenty five','twenty six','twenty seven','twenty eight','twenty nine','half']\n\nif (m==0){\n    return `${arr[h]} o' clock`\n}\n\n\nelse if((m>0&&m<14)||(m>16&&m<30) ){\n    return `${arr[m]} minute past ${arr[h]}`\n}\nelse if (m==15||m==30){\nreturn `${arr[m]} past ${arr[h]}`\n}\n\nelse if(m==45){\n    return `quarter to ${arr[h+1]}`\n}\n\n\n\nelse if (m>30){\n    let a =60-m\n    return `${arr[a]} minutes to ${arr[h+1]}`\n      \n}\n\n\n}\n"
             ],
             "outputs": []
         }
