@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                "function appendAndDelete(s, t, k) {\n    // Write your code here\nlet arr1=s.split('')\nlet arr2=t.split('')\nlet num=0\nfor (let index = 0; index < array.length; index++) {\n    if (arr1[index]==arr2[index]) {\n        num++\n    }\n    \n\n\n}\n\nlet diff1=arr1.length-num\n    let diff2=arr2.length-num\n    if (diff1+diff2>=k) {\n        return \"No\"\n    }\nelse{\n    return \"Yes\"\n}\n\n\n}\n"
+                "function appendAndDelete(s, t, k) {\n    // Write your code here\nlet arr1=s.split('')\nlet arr2=t.split('')\nlet num=0\nfor (let index = 0; index < arr1.length; index++) {\n    if (arr1[index]==arr2[index]) {\n        num++\n    }\n    \n\n\n}\n\nlet diff1=arr1.length-num\n    let diff2=arr2.length-num\n    if (diff1+diff2>=k) {\n        return \"No\"\n    }\nelse{\n    return \"Yes\"\n}\n\n\n}\n"
             ],
             "outputs": []
         },
